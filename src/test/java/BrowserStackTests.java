@@ -33,6 +33,7 @@ public class BrowserStackTests {
         caps.setCapability("name", "first_test");
 
 
+
         // Initialise the remote Webdriver using BrowserStack remote URL
         // and desired capabilities defined above
         AndroidDriver<AndroidElement> driver = new AndroidDriver<AndroidElement>(
@@ -48,7 +49,7 @@ public class BrowserStackTests {
         AndroidElement insertTextElement = (AndroidElement) new WebDriverWait(driver, 30).until(
                 ExpectedConditions.elementToBeClickable(
                         MobileBy.id("org.wikipedia.alpha:id/search_src_text")));
-        insertTextElement.sendKeys("BrowserStack");
+        insertTextElement.sendKeys("Appium");
         Thread.sleep(5000);
         List<AndroidElement> allProductsName = driver.findElementsByClassName(
                 "android.widget.TextView");
