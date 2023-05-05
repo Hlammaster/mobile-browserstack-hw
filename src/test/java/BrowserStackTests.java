@@ -13,8 +13,8 @@ public class BrowserStackTests extends TestBase {
     @Test
     void searchTest() throws MalformedURLException, InterruptedException {
         $(AppiumBy.accessibilityId("Search Wikipedia")).click();
-        $(AppiumBy.id("org.wikipedia.alpha:id/search_src_text")).setValue("Appium");
-        $$(AppiumBy.className("android.widget.TextView"))
+        $(AppiumBy.id("org.wikipedia.alpha:id/search_src_text")).sendKeys("Appium");
+        $$(AppiumBy.id("org.wikipedia.alpha:id/page_list_item_container"))
                 .shouldHave(CollectionCondition.sizeGreaterThan(0));
     }
 }
